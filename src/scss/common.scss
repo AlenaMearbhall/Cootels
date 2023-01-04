@@ -2,6 +2,13 @@
 $accentColor: #192252;
 $orangeColor: #FF620A;
 
+.page {
+
+    // .page__hero
+
+    &__hero {}
+}
+
 .button {
     color: #FFFFFF;
     font-weight: 500;
@@ -27,4 +34,22 @@ $orangeColor: #FF620A;
     // .button__common
 
     &__common {}
+}
+
+.title {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: #192252;
+
+    &__big {
+        font-size: 48px;
+    }
+}
+
+.text {
+    font-weight: 400;
+    line-height: 150%;
 }

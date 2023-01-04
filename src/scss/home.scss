@@ -46,4 +46,43 @@
 }
 
 .img-3 {}
+
+// learn--------------------------------------------------
+
+.learn {
+
+    // .learn__container
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(126);        
+    }
+
+    // .learn__images
+
+    &__images {}
+
+    // .learn__main-block
+
+    &__main-block {}
+
+    // .learn__title
+
+    &__title {
+        margin-bottom: rem(24);
+    }
+
+    // .learn__text
+
+    &__text {
+        margin-bottom: rem(16);
+    }
+
+    &__button {
+        margin-top: rem(32);
+    }
+}
+
 //====================================================================================================

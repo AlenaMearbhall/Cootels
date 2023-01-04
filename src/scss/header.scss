@@ -1,4 +1,69 @@
 //====================================================================================================
+.header {
+
+		// .header__container
+
+		&__container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			@include adaptiveValue("padding-top", 56, 30);
+			@include adaptiveValue("padding-bottom", 45, 27);
+		}
+
+		// .header__logo
+
+		&__logo {
+			color: $accentColor;
+			font-family: 'Montserrat';
+			font-weight: 600;
+			font-size: 32px;
+			line-height: 1,2;
+		}
+
+		// .header__menu
+
+		&__menu {
+			
+		}
+}
+.menu {
+
+		// .menu__body
+
+		&__body {
+
+		}
+
+		// .menu__list
+
+		&__list {
+			display: flex;
+			justify-content: space-between;		
+			gap: rem(32);	
+		}
+
+		// .menu__item
+
+		&__item {
+		}
+
+		// .menu__link
+
+		&__link {
+			color: $accentColor;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 1.18;
+			transition: color 0.3s ease 0s;
+			@media (any-hover: hover) {
+					&:hover {
+						color: $orangeColor;
+					}
+				}
+		}
+}
+
 
 //====================================================================================================
 

@@ -154,4 +154,81 @@
     }
 }
 
+// rooms--------------------------------------------------
+.rooms {
+
+    @include adaptiveValue("margin-top", 80, 60);
+
+    // .rooms__container
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .rooms__main-block
+
+    &__main-block {
+        text-align: center;
+        align-items: center;
+    }
+
+    // .rooms__title
+
+    &__title {
+        @include adaptiveValue("margin-bottom", 24, 20);
+    }
+
+    // .rooms__text
+
+    &__text {
+        @include adaptiveValue("margin-bottom", 32, 25);
+        max-width: rem(588);
+                margin: 0 auto;
+                    display: block;
+    }
+
+    // .rooms__button
+
+    &__button {
+        margin: 0 auto;
+            display: block;
+    }
+
+    // .rooms__list
+
+    &__list {
+        @include adaptiveValue("margin-top", 88, 75);
+    }
+
+    // .rooms__item
+
+    &__item {}
+}
+
+.button {
+
+    // .button__rooms
+
+    &__rooms {}
+}
+
+.item-rooms {
+
+    // .item-rooms__pisture
+
+    &__pisture {}
+
+    // .item-rooms__title
+
+    &__title {}
+
+    // .item-rooms__text
+
+    &__text {}
+
+    // .item-rooms__link
+
+    &__link {}
+}
 //====================================================================================================

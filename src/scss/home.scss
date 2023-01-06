@@ -85,4 +85,45 @@
     }
 }
 
+// about--------------------------------------------------
+
+
+.about {
+
+    // .about__container
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-columns: minmax(auto, 458px);
+        column-gap: rem(126);
+        row-gap: rem(32);
+        align-items: center;
+
+    }
+
+    // .about__item
+
+    &__item {}
+
+    // .about__title
+
+    &__title {}
+
+    // .about__text
+
+    &__text {}
+}
+
+.item-about {
+
+    // .item-about__content
+
+    &__content {}
+
+    // .item-about__picture
+
+    &__picture {}
+}
+
 //====================================================================================================

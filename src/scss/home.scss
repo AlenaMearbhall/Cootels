@@ -158,6 +158,7 @@
 .rooms {
 
     @include adaptiveValue("margin-top", 80, 60);
+    @include adaptiveValue("margin-bottom", 80, 60);
 
     // .rooms__container
 
@@ -199,18 +200,13 @@
 
     &__list {
         @include adaptiveValue("margin-top", 88, 75);
+        display: flex;
+        gap: rem(24);
     }
 
     // .rooms__item
 
     &__item {}
-}
-
-.button {
-
-    // .button__rooms
-
-    &__rooms {}
 }
 
 .item-rooms {
@@ -221,14 +217,25 @@
 
     // .item-rooms__title
 
-    &__title {}
+    &__title {
+        @include adaptiveValue("margin-top", 32, 25);
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 150%;
+        color: #000000;
+    }
 
     // .item-rooms__text
 
-    &__text {}
+    &__text {
+        @include adaptiveValue("margin-top", 18, 15);
+        @include adaptiveValue("margin-bottom", 32, 25);
+    }
 
     // .item-rooms__link
 
-    &__link {}
+    &__link {
+    }
 }
 //====================================================================================================

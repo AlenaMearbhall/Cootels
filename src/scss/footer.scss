@@ -1,3 +1,129 @@
 //====================================================================================================
+.footer {
+    background-color: #0B265A;
+    @include adaptiveValue("padding-top", 120, 80);
+    @include adaptiveValue("padding-bottom", 120, 80);
 
+    // .footer__container
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #D9DBDE;
+    }
+
+    // .footer__main-block
+
+    &__main-block {}
+
+    // .footer__logo
+
+    &__logo {
+        color: #ffffff;
+        margin-bottom: rem(13);
+    }
+
+    // .footer__social
+
+    &__social {}
+
+    // .footer__content
+
+    &__content {}
+}
+
+.footer-main-block {
+
+    // .footer-main-block__text
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        width: rem(186);
+        margin-bottom: rem(36);
+    }
+}
+
+.social-footer {
+
+    // .social-footer__list
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        @media (any-hover: hover) {
+                &:hover {
+
+                }
+            }
+    }
+    // .social-footer__item
+
+    &__item {
+        &:not(:last-child) {
+                margin-right: rem(24);
+            }
+
+            img {
+            
+            }
+    }
+}
+
+.content-footer {
+
+    // .content-footer__list
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(105);
+    }
+
+    // .content-footer__item
+
+    &__item {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.18;
+    }
+}
+
+.item-content {
+
+    // .item-content__list
+
+    &__list {
+        
+    }
+
+    &__link {
+        @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+    }
+
+    // .item-content__item
+
+    &__item {
+        &:not(:last-child) {
+                margin-bottom: rem(24);
+            }        
+    }
+
+    // .item-content__item-title
+
+    &__item-title {
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+    }
+}
 //====================================================================================================

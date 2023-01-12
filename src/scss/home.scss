@@ -301,7 +301,6 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
-
         color: #0E1734;
     }
 
@@ -311,11 +310,19 @@
 
     // .how-get__list
 
-    &__list {}
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
+    }
 
     // .how-get__item
 
-    &__item {}
+    &__item {
+        background: #FFFFFF;
+        border-radius: 4px;
+        box-shadow: -0.1em 0 1.4em rgba(0, 0, 0, .2);
+    }
 }
 
 .button {

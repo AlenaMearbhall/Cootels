@@ -479,8 +479,8 @@
 // customers--------------------------------------------------
 
 .customers {
-    @include adaptiveValue("padding-top", 80, 60);
-    @include adaptiveValue("padding-bottom", 80, 60);
+    @include adaptiveValue("padding-top", 80, 30);
+    @include adaptiveValue("padding-bottom", 80, 30);
 
     // .customers__container
 

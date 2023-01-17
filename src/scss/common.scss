@@ -70,4 +70,5 @@ $orangeColor: #FF620A;
 .text {
     font-weight: 400;
     line-height: 150%;
+    @include adaptiveValue("font-size", 18, 14);
 }

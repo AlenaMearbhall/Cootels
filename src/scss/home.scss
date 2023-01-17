@@ -68,13 +68,11 @@
 
     &__container {
         display: flex;
-        // justify-content: space-between;
         align-items: center;
         @include adaptiveValue("gap", 126, 30);
         
             @media (max-width: em(1000)) {
                 flex-direction: column;
-                // align-items: flex-start;
                 @include adaptiveValue("gap", 24, 15);
             }
     }
@@ -126,22 +124,15 @@
 
 
 .about {
-    @include adaptiveValue("padding-top", 80, 60);
-    @include adaptiveValue("padding-bottom", 60, 60);
+    @include adaptiveValue("padding-top", 80, 35);
+    @include adaptiveValue("padding-bottom", 60, 20);
 
     // .about__container
 
     &__container {
-        // display: grid;
-        // grid-template-columns: repeat(2, 1fr);
-        // grid-auto-columns: minmax(auto, rem(584));
-        // column-gap: rem(126);
-        // row-gap: rem(32);
-        // align-items: center;
         display: flex;
         flex-wrap: wrap;
         flex-grow: 100%;
-        
         
     }
 
@@ -150,9 +141,19 @@
         align-items: center;
         
         &:not(:last-child) {
-                margin-bottom: rem(32);
+            @include adaptiveValue("margin-bottom", 32, 24);
             }
+        @media (max-width: em(820)) {
+            flex-direction: column-reverse;
+            @include adaptiveValue("gap", 24, 15);
+        }
     }
+
+        &__row-2 {
+            @media (max-width: em(820)) {
+                    flex-direction: column;
+                }
+        }
 
     // .about__item
 
@@ -163,44 +164,62 @@
     // .about__title
 
     &__title {
-        margin-bottom: rem(24);
+        @include adaptiveValue("margin-bottom", 24, 18);
     }
 
     // .about__text
 
-    &__text {}
+    &__text {
+    }
 }
 
 .item-about {
 
     // .item-about__content
 
-    &__content {}
+    &__content {
+
+    }
 
     // .item-about__picture
 
-    &__picture {}
-
+    &__picture {
+        img {
+                @media (max-width: em(630)) {
+                    max-width: 100%;
+                    height: auto;
+                }
+    }
+    }
     &__picture-1 {
-        margin-left: rem(126);
+        @include adaptiveValue("margin-left", 126, 0);
+        @media (max-width: em(820)) {
+            align-self: flex-end;
+            }
+
     }
 
     &__picture-2 {
-        margin-right: rem(126);
+        @include adaptiveValue("margin-right", 126, 0);
+        @media (max-width: em(820)) {
+                align-self: flex-start;
+            }
+
     }
 }
 
 // rooms--------------------------------------------------
 .rooms {
 
-    @include adaptiveValue("padding-top", 80, 60);
-    @include adaptiveValue("padding-bottom", 80, 60);
+    @include adaptiveValue("padding-top", 80, 30);
+    @include adaptiveValue("padding-bottom", 80, 30);
 
     // .rooms__container
 
     &__container {
         display: flex;
         flex-direction: column;
+        
     }
 
     // .rooms__main-block
@@ -213,48 +232,62 @@
     // .rooms__title
 
     &__title {
-        @include adaptiveValue("margin-bottom", 24, 20);
+        @include adaptiveValue("margin-bottom", 24, 18);
     }
 
     // .rooms__text
 
     &__text {
-        @include adaptiveValue("margin-bottom", 32, 25);
+        @include adaptiveValue("margin-bottom", 32, 20);
         max-width: rem(588);
-                margin: 0 auto;
-                    display: block;
+        margin: 0 auto;
+        display: block;
     }
 
     // .rooms__button
 
     &__button {
         margin: 0 auto;
-            display: block;
+        display: block;
     }
 
     // .rooms__list
 
     &__list {
-        @include adaptiveValue("margin-top", 88, 75);
+        @include adaptiveValue("margin-top", 88, 20);
         display: flex;
-        gap: rem(24);
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        @include adaptiveValue("gap", 24, 24);
     }
 
     // .rooms__item
 
-    &__item {}
+    &__item {
+        max-width: rem(384);
+    }
 }
 
 .item-rooms {
 
     // .item-rooms__pisture
 
-    &__pisture {}
+    &__pisture {
+        align-self: center;
+        img {
+            align-self: center;
+                @media (max-width: em(630)) {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+    }
 
     // .item-rooms__title
 
     &__title {
-        @include adaptiveValue("margin-top", 32, 25);
+        @include adaptiveValue("margin-top", 32, 15);
         font-family: 'Montserrat';
         font-weight: 600;
         font-size: 24px;
@@ -266,7 +299,8 @@
 
     &__text {
         @include adaptiveValue("margin-top", 18, 15);
-        @include adaptiveValue("margin-bottom", 32, 25);
+        @include adaptiveValue("margin-bottom", 32, 20);
+
     }
 
     // .item-rooms__link
@@ -278,8 +312,8 @@
 // how-get--------------------------------------------------
 
 .how-get {
-    @include adaptiveValue("padding-top", 80, 60);
-    @include adaptiveValue("padding-bottom", 80, 60);
+    @include adaptiveValue("padding-top", 80, 30);
+    @include adaptiveValue("padding-bottom", 80, 30);
     // .how-get__container
 
     &__container {
@@ -287,15 +321,27 @@
         justify-content: space-between;
         align-items: center;
         @include adaptiveValue("gap", 205, 20);
+            @media (max-width: em(1050)) {
+                    flex-direction: column;
+                    align-self: flex-start;
+                }
     }
 
     // .how-get__content
 
-    &__content {}
+    &__content {
+
+    }
 
     // .how-get__main-block
 
-    &__main-block {}
+    &__main-block {
+            @media (max-width: em(1050)) {
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
+    }
 
     // .how-get__discraption
 
@@ -317,6 +363,10 @@
 
     &__text {
         @include adaptiveValue("margin-bottom", 32, 24);
+            @media (max-width: em(1050)) {
+                width: 60%;
+                display: inline-block;
+                }
     }
 
     // .how-get__links
@@ -324,6 +374,10 @@
     &__links {
         display: flex;
         align-items: center;
+            @media (max-width: em(1050)) {
+                align-items: center;
+                justify-content: center;
+                }
     }
 
     // .how-get__button
@@ -361,6 +415,9 @@
         box-shadow: -0.1em 0 1.4em rgba(0, 0, 0, .2);
         padding: rem(32) rem(36);
         @include adaptiveValue("min-width", 588, 400);
+            @media (max-width: em(440)) {
+                max-width: 90%;
+                }
     }
 }
 
@@ -387,7 +444,7 @@
     &__title {
         font-family: 'Montserrat';
         font-weight: 600;
-        font-size: 24px;
+        @include adaptiveValue("font-size", 24, 16);
         line-height: 150%;
         color: #424F7B;
         @include adaptiveValue("margin-bottom", 24, 20);
@@ -413,7 +470,7 @@
 
     &__text {
         font-weight: 400;
-        font-size: 18px;
+        @include adaptiveValue("font-size", 18, 14);
         line-height: 150%;
         color: #848FAC;
     }

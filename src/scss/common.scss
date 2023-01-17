@@ -56,13 +56,14 @@ $orangeColor: #FF620A;
 .title {
     font-family: 'Montserrat';
     font-weight: 600;
-    font-size: 36px;
+    @include adaptiveValue("font-size", 36, 22);
     line-height: 150%;
     letter-spacing: -0.01em;
     color: #192252;
 
     &__big {
-        font-size: 48px;
+        // font-size: 48px;
+        @include adaptiveValue("font-size", 48, 24);
     }
 }
 

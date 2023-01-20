@@ -1,8 +1,8 @@
 //====================================================================================================
 .footer {
     background-color: #0B265A;
-    @include adaptiveValue("padding-top", 120, 80);
-    @include adaptiveValue("padding-bottom", 120, 80);
+    @include adaptiveValue("padding-top", 120, 35);
+    @include adaptiveValue("padding-bottom", 120, 35);
 
     // .footer__container
 
@@ -11,6 +11,12 @@
         justify-content: space-between;
         align-items: center;
         color: #D9DBDE;
+
+            @media (max-width: em(630)) {
+                    flex-direction: column;
+                    @include adaptiveValue("gap", 60, 20);
+                    align-items: flex-start;
+                }
     }
 
     // .footer__main-block
@@ -42,7 +48,7 @@
         font-size: 16px;
         line-height: 28px;
         width: rem(186);
-        margin-bottom: rem(36);
+        @include adaptiveValue("margin-bottom", 36, 15);
     }
 }
 
@@ -53,6 +59,7 @@
     &__list {
         display: flex;
         align-items: center;
+
     }
 
     &__link {
@@ -82,7 +89,9 @@
     &__list {
         display: flex;
         justify-content: space-between;
-        gap: rem(105);
+        @include adaptiveValue("gap", 105, 10);
+
+
     }
 
     // .content-footer__item
@@ -103,6 +112,7 @@
     }
 
     &__link {
+        white-space: nowrap;
         @media (any-hover: hover) {
                 &:hover {
                     text-decoration: underline;
@@ -114,7 +124,7 @@
 
     &__item {
         &:not(:last-child) {
-                margin-bottom: rem(24);
+            @include adaptiveValue("margin-bottom", 24, 10);
             }        
     }
 
